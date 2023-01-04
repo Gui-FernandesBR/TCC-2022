@@ -1,0 +1,77 @@
+\chapter{Introdução} \label{sec:introduction}
+
+O presente documento corresponde ao trabalho de formatura entregue como requisito para obtenção do título de Engenheiro Civil na Escola Politécnica da Universidade de São Paulo.
+O trabalho de formatura foi realizado ao longo do ano de 2022 e desenvolvido com base em conhecimentos adquiridos ao longo dos últimos cinco anos de graduação.
+
+O texto trata do problema de roteirização de veículos, do inglês \textit{Vehicle Routing Problem} (VRP), no contexto de distribuição de entregas de última milha em regiões urbanas. 
+Mais especificamente, busca-se investigar as causas de rotas realizadas pelos veículos de entrega muitas vezes seguirem uma trajetória diferente da que foi programada previamente.
+Essa diferença pode ser tanto em termos de distâncias e tempos, como, principalmente, em termos de alterações na ordem ou sequência de pontos visitado em cada roteiro. Assim, defini-se tal diferença como sendo uma não aderência à roteirização programada.
+Ademais, enquadra-se no escopo do trabalho a análise espacial de malhas viárias urbanas, a fim de entender a relação que a geometria da malha tem com essa não aderência supracitada.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos do trabalho} \label{objetivos}
+
+O trabalho teve como objetivo principal estudar o fenômeno de não aderência ao sequenciamento de entregas. Tal sequenciamento ocorre através da roteirização de uma série de clientes associados a uma distribuidora de produtos. Deste modo, define-se a rota formada como todo o percurso contemplado entre a saída de um veículo de entregas de um Centro de Distribuição (CD), passando por cada cliente em ordem sequencial, para realizar a entrega, e, por fim, retornando ao CD para, no dia seguinte, realizar uma nova rota.
+Para atender tal objetivo, foram apresentados dois estudos de caso a partir de bases de dados históricos de entregas de última milha.
+
+Primeiramente, estudou-se um conjunto de rotas realizadas por uma companhia de bebidas a partir de um CD localizado na Região Metropolitana de São Paulo, Brasil.
+Em seguida, analisou-se a operação de uma empresa de comércio eletrônico, denominada \textit{Amazon.com, Inc}, em cinco grandes centros urbanos dos Estados Unidos.
+A análise destes dois estudos de caso facilitou o reconhecimento de padrões a partir dos dados, além de reduzir a possibilidade de existência de algum viés nas considerações finais.
+
+Desta forma uma série de objetivos elencados a seguir foram estipulados.
+O primeiro objetivo estipulado é o de definir um conjunto de variáveis associada à distribuição de entregas de última milha, tais como as características do cliente, da equipe de entrega, da entrega em si, da localização do cliente, da rota e da malha viária da região.
+Em sequência, o objetivo complementa-se na busca por uma correlação entre a não aderência ao sequenciamento programado e essas variáveis. Tal correlação considera a tese de que a não aderência possa ser explicada através da associação de diferentes fatores associados a essas características.
+
+O primeiro conjunto de fatores estudados são relativos às características próprias da entrega, tais como o horário de entrega, o volume de entrega, entre outros. Tal análise incorpora-se ao objetivo a fim de se compreender a relevância que tais indicadores têm sobre a não aderência ao sequenciamento estipulado.
+
+Em sequência, estudada-se o fator de circuito, o qual será apresentada posteriormente na Seção \ref{sec:fatorCircuito}. 
+Tal medida representa a diferença entre a distância euclidiana entre dois pontos localizados numa cidade e a distância real percorrida por um veículo para ir de um desses pontos ao outro. Seu uso, conforme a tese citada, busca mensurar quantitativamente a dificuldade do veículo de entregas de acessar o ponto de entrega e, indiretamente, avaliar a configuração viária da região.
+
+Em adição ao fator de circuito, quantificou-se as características da malha viária a partir de estudos baseados em trabalhos passados.
+Estes permitiram acesso a uma gama de parâmetros voltados à caracterização de malhas viárias através da construção baseada em grafos, ou seja, estabelecendo um modelo de grafo que representasse a malha viária e, a partir daí, permitisse que esta fosse quantificada através de determinadas variáveis.
+Dessa forma foi possível incorporar novas estatísticas relativas à caracterização da malha viária às análises.
+
+Ademais, a fim de se complementar as análises de malha com a experiência operacional das equipes de entregas de uma das empresas estudadas, realizou-se uma visita técnica a um Centro de Distribuição (CD) de uma das empresas analisadas.
+Tal prática permitiu expandir as observações realizadas e confirmar na prática a efetividade de parte das hipóteses, além de captar referências por parte da empresa e de seus operadores, acrescentando assim uma visão prática ao projeto.
+%
+Assim, complementou-se entre os objetivos do presente estudo  a investigação da interferência de características da malha viária sobre a não aderência do sequenciamento programado de entregas de última milha.
+
+Desta forma, espera-se que o trabalho possa contribuir nas pesquisas futuras acerca da aderência aos resultados de roteirização e sua relação com a malha viária na qual o conjunto de entregas está inserido.
+Cita-se, além disso, que as ferramentas e procedimentos utilizados durante a pequisa foram detalhadamente documentados, registrados e, em alguns casos, tornados públicos, a fim de facilitar desenvolvimentos futuros e a eventual reprodução dos resultados.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Relevância do tema} \label{RelevanciaTema}
+
+Uma hipótese a ser considerada é a de que os roteiros programados são construídos buscando alguma forma de otimização, seja a minimização de distâncias totais percorridas, de tempo total de entrega ou, então, de custo total para a empresa que realiza essas entregas. 
+Sendo assim, ao se realizar uma ou mais rotas de modo diferente do que foi previamente programado, gera-se uma perda de eficiência da operação otimizada de entrega.
+Essa perda de eficiência pode ser representada em termos monetários ou não, e impacta diferentes grupos da sociedade.
+
+Primeiramente, nota-se que as próprias empresas enfrentam um aumento de custos devido à não aderência.
+Assim, destaca-se o aumento do consumo de combustível, de horas trabalhadas pela mão-de-obra e do custo de manutenção dos veículos, que passam a percorrer distâncias acima do programado e, assim, reduzem seu tempo de vida útil previsto.
+Aumenta-se indiretamente, também, o custo total ao se reduzir a capacidade de entregas de cada veículo, ou seja, ao se percorrer distâncias maiores ou gastar tempos maiores para entregas, acaba-se exigindo que um menor número de entregas por veículo seja realizado ou que uma maior frota de veículos seja utilizada.
+
+Além disso, pessoas que moram em centros urbanos e, por consequência, dependem da infraestrutura de malhas viárias, muitas vezes também sofrem com os resultados da não aderência, uma vez que este problema pode acarretar em maiores congestionamentos nas vias por parte dos veículos de entregas que passam a ocupar a via por um tempo maior do que o ideal.
+Os funcionários que atuam na operação de entregas também podem ser afetados, uma vez que os atrasos gerados por essa não aderência podem fazer com que a jornada líquida de trabalho se estenda para além do planejado.
+
+Adicionalmente, tem-se o aspecto ambiental.
+A emissão de gases contribuidores para o efeito estufa e o aquecimento global é aumentada dado que as distâncias percorridas pelos veículos acabam sendo maiores (assumindo-se uma frota majoritariamente movida a combustão).
+Tal efeito é especialmente potencializado em zonas de alta urbanização, que comumente sofrem com a poluição atmosférica.
+De fato, algumas cidades europeias têm adotado estratégias de restrição de tráfego de veículos de entrega em zonas centrais da cidade, tornando a distribuição cada vez mais restrita, o que exige por sua vez uma maior eficiência da operação dessas entregas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Organização do texto}
+
+Este documento está dividido em \ref{sec:consideracoesFinais} capítulos.
+O Capítulo \ref{sec:revis_biblio} apresenta os conceitos utilizados ao longo do trabalho, bem como uma análise sobre a literatura atual e quais oportunidades de melhorias observadas ao se realizar tal análise.
+
+O Capítulo \ref{sec:Contexto} contém uma descrição da operação de cada uma das duas empresas analisadas.
+Esta descrição compreende desde aspectos básicos como localização geográfica dos CDs e clientes até aspectos mais detalhados como, por exemplo, o conjunto de dados provindo de cada uma das empresas.
+
+O Capítulo \ref{sec:mat&met} apresenta as metodologias propostas para realização do trabalho, incluindo os resultados esperados que foram elencados no início da pesquisa, as variáveis propostas para quantificar a não aderência ao sequenciamento de entregas, as ferramentais computacionais utilizadas para obtenção e tratamento de dados, os dados geoespaciais empregados e, finalmente, a descrição do conjunto de algoritmos criados durante o trabalho.
+
+Os Capítulos \ref{sec:EstCasoAmbev} e \ref{sec:EstCasoAmazon}  apresentam os resultados obtidos para o exemplo da empresa de bebidas e da \textit{Amazon.com}, respectivamente.
+Dentro de cada um desses capítulos são primeiro apresentados os resumos e identificação iniciais dos dados fornecidos, para então descrever-se e quantificar-se o conjunto de rotas e as malhas viárias em que estas estão incluídas. 
+Por fim, discute-se a relação entre as variáveis e estatísticas que foram geradas durante cada capítulo.
+
+Finalmente, o Capítulo \ref{sec:consideracoesFinais} descreve as considerações finais do trabalho e é seguido pelas referências bibliográficas.
+Logo após as referências, o trabalho é finalizado pelos apêndices adicionados de modo a complementar a argumentação quando necessário.

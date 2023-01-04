@@ -1,0 +1,154 @@
+\documentclass[espacoumemeio, times, 12pt, pnumromarab, abnttoc, normalnum]{politex}
+
+% ========== Packages ==========
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{graphicx,cite,enumerate}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+%colorlinks=true, citecolor=blue, linkcolor=magenta]{hyperref}%hidelinks, 
+\usepackage{blindtext}
+\usepackage[version=4]{mhchem}
+\usepackage[alf]{abntex2cite}
+\usepackage{listings}
+\usepackage[table, xcdraw]{xcolor}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage[justification=centering]{caption}
+\usepackage{tcolorbox}
+\usepackage{pdflscape}
+
+\captionsetup[figure]{font=small, position=top}
+\captionsetup[table]{font=small, position=top}
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "code_snippet_style"
+\lstdefinestyle{code_snippet_style}{
+  backgroundcolor=\color{backcolour}, commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=t,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+\lstset{style=code_snippet_style}
+\renewcommand*{\lstlistlistingname}{Lista de Códigos}
+\renewcommand*{\lstlistingname}{Código}
+
+
+% left fixed width:
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% center fixed width:
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+% flush right fixed width:
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+
+% Título
+\titulo{Impacto da geometria de malhas viárias sobre o desempenho da distribuição de entregas de última milha}
+
+% Autores
+\autor{Felipe Novaes Fernandes\\
+	   Guilherme Fernandes Alves}
+
+% Orientador
+\orientador{Claudio Barbieri da Cunha}
+
+% Tipo de documento e Engenharia
+\tcc{Civil}
+
+% Departamento e área de concentração
+\departamento{Departamento de Engenharia de Transportes}
+\areaConcentracao{Planejamento e Operação de Transportes}
+
+% Local
+\local{São Paulo}
+
+% Ano
+\data{2022}
+
+
+\begin{document}
+% ========== Capa e folhas de rosto ==========
+\capa 
+\falsafolhaderosto
+\folhaderosto
+
+% ========== Ficha catalográfica ==========
+% Fazer solicitação no site: https://www.poli.usp.br/bibliotecas/servicos/catalogacao-na-publicacao
+\includepdf{images/catalogacao.pdf}
+
+% ================ Resumo ===============
+\input{0_resumo}
+
+% ========== Listas (opcional) ==========
+\listadefiguras
+\listadetabelas
+\lstlistoflistings
+
+% ========== Listas definidas pelo usuário (opcional) ==========
+\begin{pretextualsection}{Lista de siglas}
+
+\begin{itemize}
+    \item ACP: Análise de Componentes Principais;
+    \item B2B: \textit{Business-to-business};
+    \item B2C: \textit{Business-to-consumer};
+    \item CD: Centro de Distribuição;
+    \item LISA: Indicadores Locais de Associação Espacial, tradução livre;
+    \item NAS: Não Aderência Sequencial;
+    \item PDE: Ponto de Entrega;
+    \item SKU: \textit{Stock-keeping-unit}, é o código de identificação individual de cada produto;
+    \item TSP: \textit{Travelling Salesman Problem};
+    \item VRP: \textit{Vehicle Routing Problem}.
+\end{itemize}
+
+\end{pretextualsection}
+
+% ========== Sumário ==========
+\sumario
+
+% ========== Elementos textuais ==========
+
+\input{1_introducao}
+
+\input{2_revisao}
+
+\input{3_caracterizacao}
+
+\input{4_materiais_e_metodos}
+
+\input{4-2_lmr_analyzer.tex}
+
+\input{5_empresa_bebidas.tex}
+
+\input{6_amazon}
+
+\input{7_conclusoes}
+
+% --- ABNT (requer ABNTeX 2) ---
+\bibliographystyle{abntex2-alf}
+\bibliography{references}
+
+% ========== Apêndices (opcional) ==========
+\apendice
+\input{8_appendix}
+
+\end{document}

@@ -1,0 +1,48 @@
+\chapter{Considerações Finais} \label{sec:consideracoesFinais}
+
+Primeiramente, é relevante ressaltar as limitações encontradas ao longo do trabalho.
+Cita-se que os arquivos georreferenciados dos bairros de ambos os estudos de caso continham apenas municípios de maior porte, os quais costumam ter bibliotecas digitais mais acessíveis.
+As cidades satélite de menor porte, na maioria das vezes, não apresentavam arquivos consolidados de mapeamento dos bairros.
+Assim, o trabalho enfrentou em ambos os estudos uma redução das áreas de estudo para qualquer análise de organização espacial a partir de bairros.
+Uma estratégia para mitigar este efeito seria a adoção de técnicas como as apresentadas por \citeonline{merchan2020quantifying} quando propõe o agrupamento (clusterização) de regiões como forma alternativa de análise.
+
+Ademais, destaca-se que ambos os estudos de caso trabalharam com redes de entregas logísticas associadas a espaços de alta urbanização e pertencentes a empresas de grande porte.
+Entende-se que em condições diferentes, como zonas rurais, novas avaliações seriam necessárias para a validação da metodologia desenvolvida.
+Também destaca-se que a estrutura das malhas viárias pode ser alterada com o passar dos anos (\citeauthoronline{}, \citeyear{}), o que abre oportunidade para se revisitar este estudo num horizonte de 10, 20 ou 30 anos. 
+
+Ainda nas limitações, entende-se que muitos fatores afetam a performance das rotas de entrega e, dentre eles, há fatores que não estavam contemplados nas bases de dados ou nos dados abertos utilizados no trabalho.
+Elementos como a disponibilidade de vagas para estacionamento, o fluxo nas vias e o tipo de fachada/portaria são limitantes à qualidade dos resultados obtidos.
+Tais considerações podem, porém, servir como objeto de estudo para trabalhos futuros.
+
+Já no espectro dos resultados obtidos, estabelece-se que os problemas associados às entregas de última milha são complexos e podem estar associados a múltiplos fatores ligados à equipe de entregas, ao cliente, à empresa e suas políticas de estímulo, à entrega em si, à localização e ao meio onde a rota se dá e o cliente se localiza.
+Dessa forma, não é possível estabelecer uma única variável que seja capaz de predizer a ocorrência não aderência ao sequenciamento de entregas ou que possa guiar o processo de tomada de decisões das empresas encarregadas dessa distribuição.
+Por exemplo, observa-se, a partir do estudo de caso da empresa de bebidas brasileira que vários dos fatores correlatos aos problemas de entregas, tais como horário da entrega, volume da entrega e equipe responsável são fatores influentes que podem ser diretamente influenciados pela própria empresa.
+
+Já quanto aos parâmetros relativos à malha viária em que as entregas de última milha estudadas estavam inseridas, o que se viu foi a confirmação de algumas das hipóteses levantadas previamente com base na literatura. 
+De fato, todas as análises da empresa de bebidas brasileira apontaram para uma heterogeneidade das características de ``circuicidade'', conectividade e orientação ao longo dos bairros estudados.
+Nesse sentido, resultados sugeriram que há tendência de haver maior quantidade de devoluções ou repasses conforme se aumenta a complexidade da malha.
+
+Através do estudo de caso da \textit{Amazon}, identifica-se que o local de entregas e a estrutura urbana apresentam efeitos sobre os problemas de entrega antes pouco trabalhados na perspectiva acadêmica e, de acordo com a visita técnica à empresa de bebidas, na perspectiva corporativa.
+%
+Tais efeitos, menos intuitivamente puderam ser trabalhados com maior detalhe no estudo de caso da \textit{Amazon} devido à qualidade e ao volume das informações disponibilizadas. No estudo, identificou-se uma série de variáveis relativas à malha viária, à estrutura urbana e à configuração das rotas que poderiam associar-se como efeitos causadores às variáveis-problema das entregas. Após uma série de análises de correlação e correlação múltipla, foi possível estabelecer que 3 fatores afetam em 18\% combinadamente a ocorrência de repasses. Tais fatores, direta ou indiretamente relacionados à concepção da estrutura viária e da densidade de entregas na região têm potenciais benefícios à empresa, à sociedade e ao cliente que excedem à simples ocorrência de repasses na rota de entregas.
+
+Como mencionado anteriormente, a não aderência ao sequenciamento programado de entregas acarreta num tempo de circulação maior, com uma distância maior de circulação, relacionados a maiores custos e impactos ambientais não previstos no planejamento da empresa. 
+Sendo assim, os efeitos das três variáveis utilizadas para representar ocorrência de repasses podem alterar esse cenário em até 18\% conjuntamente.
+Tal resultado é ainda mais relevante ao se considerar que operações de distribuição de última milha compreendem setores de grande porte ao redor do mundo.
+%
+Estes efeitos, por configurarem em grande parte efeitos de estrutura urbana, podem ser considerados por entidades públicas (e.g. prefeituras) como oportunidades de investimento visando o futuro e o crescimento das empresas de logística locais, aumentando a qualidade da entrega para o operador e para o cliente.
+Por outro lado, tais efeitos podem ser considerados pelas próprias empresas logísticas em seu planejamento estratégico, a fim de se tomar decisões acerca de quais regiões operar seu sistema de entregas considerando-se tais variáveis.
+
+Assim, no que tange às hipóteses preliminares estabelecidas anteriormente, identifica-se que suas validades foram parcial ou integralmente confirmadas.
+O primeiro resultado listado teve sua confirmação parcial, dado que a configuração das vias comprovou-se como um elemento que pode fazer das cidades lugares mais complexos para entregas, apesar de que pouco se trabalhou sobre os efeitos das condições de terreno, como citava-se.
+Já o segundo resultado teve sua validação integral, dado que foi possível quantificar as condições das malhas urbanas para realizar comparações baseadas em estatísticas e  investigações de correlação. 
+O terceiro resultado, por sua vez, teve uma comprovação parcial, pois os resultados de correlação de NAS com fator de circuito foram interessantes, porém insuficientes como explicação única do fenômeno.
+E, por fim, o quarto resultado esperado teve, também, uma validação parcial, dado que foi possível estabelecer uma relação entre o NAS e os indicadores de malha viária, porém, assim como o fator de circuito, foram insuficientes quando analisados isoladamente.
+
+A documentação dos métodos aplicados também se mostrou satisfatória, tendo inclusive seu acesso disponibilizado abertamente online, o que facilita a transparência e confiabilidade dos resultados.
+Os códigos utilizados foram construídos de forma que futuras análises poderão ser realizadas sem necessidade de grandes alterações, bastando apenas carregar os dados relativos a uma nova região de estudo.
+Nesse sentido, identifica-se que os métodos criados tem a potencialidade de tornarem-se ferramentas (ou serem incorporados a ferramentas já existentes) para aplicações futuras.
+
+Ao final do trabalho, sugere-se, em caso de trabalhos futuros revisitarem o mesmo tema, adoção de modelos não supervisionado de aprendizado de máquina (\textit{machine learning}), assim como feito por, como forma de encontrar correlações não previstas anteriormente.
+Finalmente, é importante destacar que os resultados do trabalho podem ser estendidos para além da logística, como educação, saúde, urbanismo, gestão pública, mobilidade urbana, segurança pública, 
+% Esse espectro de áreas beneficiadas é devido ao impacto que a logísitca de última, e seu planejamento adequado, tem sobre diversas áreas.
