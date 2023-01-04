@@ -24,8 +24,8 @@ You can easily navigate through the repository by clicking on the links below:
 ## Description
 
 - **Title**: Impacto da geometria de malhas viárias sobre o desempenho da distribuição de entregas de última milha
-- **Authors**: [Felipe Novaes Fernandes]() and [Guilherme Fernandes Alves]()
-- **Supervisor**: [Claudio Barbieri da Cunha]()
+- **Authors**: Felipe Novaes Fernandes and [Guilherme Fernandes Alves](https://orcid.org/0000-0003-3873-2699)
+- **Supervisor**: [Claudio Barbieri da Cunha](https://scholar.google.com/citations?user=mebM95oAAAAJ&hl=en&oi=ao)
 - **Institution**: Escola Politécnica da Universidade de São Paulo
 - **Department**: Transportation Engineering
 - **Date of approval**: 16th December, 2022
