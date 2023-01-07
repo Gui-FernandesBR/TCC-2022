@@ -1,30 +1,30 @@
-\chapter{Estudo de caso I: Empresa de Bebidas} \label{sec:EstCasoAmbev}
+\chapter{Estudo de caso I: Empresa de Bebidas} \label{sec:EstCasoBebidas}
 
 No presente capítulo serão apresentados os resultados obtidos a partir da base de dados da empresa de bebidas brasileira.
 As análises foram divididas a partir da temática geral às quais elas pertencem, considerando uma sequência lógica dos tipos de análises.
 Inicialmente, serão apresentadas os valores gerais de Repasse, Devolução e Não Aderência Sequencial (NAS).
-Em sequência, na Seção \ref{sec:impactoAmbev}, serão apresentados os impactos que a não aderência operacional tem nas escalas econômica, social e ambiental.
+Em sequência, na Seção \ref{sec:impactoBebidas}, serão apresentados os impactos que a não aderência operacional tem nas escalas econômica, social e ambiental.
 Já na Seção \ref{sec:visita_tecnica}, será apresentada uma descrição acompanhada de considerações gerais acerca da visita técnica realizada a um dos CDs da empresa.
 
 Na Seção \ref{sec:analise_base_dados} busca-se compreender se o comportamento das variáveis-problema em função das características da rota, tais como a posição sequencial do PDE na rota, a frequência de visita do PDE no intervalo estudado, o veículo que realizou a visita, o horário de vista do PDE e o volume entregue ao PDE.
 Desta forma, é possível compreender o quão correlatas as variáveis problema são com as características gerais de cada entrega.
 
-Na Seção \ref{sec:distanciaCDAmbev}, em que avalia-se se a distância do PDE ao CD tem algum efeito sobre sua performance nas variáveis-problema.
-Ainda considerando-se a posição geográfica dos PDEs, segue-se para a Seção \ref{sec:dispersaoAmbev}, em que considera-se uma relação do PDE para com a sua rota de maneira menos generalizada como realizado nas análises anteriores.
+Na Seção \ref{sec:distanciaCDBebidas}, em que avalia-se se a distância do PDE ao CD tem algum efeito sobre sua performance nas variáveis-problema.
+Ainda considerando-se a posição geográfica dos PDEs, segue-se para a Seção \ref{sec:dispersaoBebidas}, em que considera-se uma relação do PDE para com a sua rota de maneira menos generalizada como realizado nas análises anteriores.
 Aqui, busca-se compreender como que o isolamento geográfico de um PDE em relação aos outros PDEs de sua rota pode afetar a ocorrência das variáveis-problema.
 
-A seguir, busca-se avaliar as autocorrelações espaciais das variáveis problema na Seção \ref{sec:geoestatAmbev}.
+A seguir, busca-se avaliar as autocorrelações espaciais das variáveis problema na Seção \ref{sec:geoestatBebidas}.
 Tal análise tem como intuito compreender se existe algum padrão espacial na ocorrência das variáveis-problema ou se elas ocorrem do forma aleatória espacialmente. 
 As autocorrelações espaciais finalizam as análises que consideram a malha viária. 
 Dessa forma, apresenta-se, primeiro, a Seção \ref{sec:AMBEV_FC}, onde avalia-se, em diferentes metodologias, a relação entre o fator de circuito e as variáveis-problema e, em sequência, a Seção \ref{sec:AMBEV_MalhaViaria}, que introduz as variáveis de \citeonline{boeing2019urban} a fim de se avaliar a correlação entre as variáveis-problema e diferentes medidas descritivas da malha viária.
 Dessa forma, busca-se compreender o quanto a disposição da malha viária é capaz de explicar os repasses, as devoluções e o NAS.
 
-Por fim, na Seção \ref{sec:relMetricasAmbev}, analisa-se conjuntamente os resultados obtidos nas seções anteriores, de modo a compreender o comportamento de cada variável estudada de forma associada.
+Por fim, na Seção \ref{sec:relMetricasBebidas}, analisa-se conjuntamente os resultados obtidos nas seções anteriores, de modo a compreender o comportamento de cada variável estudada de forma associada.
 
 Assim, o que se busca com esse capítulo é, em geral, conceber diferentes parâmetros que possam ser associados de modo a se discernir quanto à influência da malha viária nos diferentes aspectos apresentados no restante do trabalho na abrangência da base de dados da empresa de bebidas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Repasse, Devolução e NAS} \label{sec:indicadoresAmbev}
+\section{Repasse, Devolução e NAS} \label{sec:indicadoresBebidas}
 
 De maneira geral, identifica-se que 7,2\% das entregas realizadas nos seis meses amostrais apresentaram repasses.
 Porém, quando observa-se as rotas individualmente, identifica-se, que 52\% das rotas realizadas no período apresentaram repasses, o que significa dizer que em apenas 48\% das rotas não foi necessário passar mais de uma vez em ao menos um dos clientes, ainda que, no geral mais de 90\% dos clientes são atendidos já na primeira tentativa de entrega.
@@ -39,7 +39,7 @@ Assim, na Figura \ref{fig:Repasses}, é possível observar a ocorrência de cada
     \label{fig:Repasses}
 \end{figure}
 
-Em adição ao histograma da Figura \ref{fig:Repasses}, é possível observar as ocorrências de repasses nas rotas como um todo a partir da Figura \ref{fig:RepassesRotasAmbev}.
+Em adição ao histograma da Figura \ref{fig:Repasses}, é possível observar as ocorrências de repasses nas rotas como um todo a partir da Figura \ref{fig:RepassesRotasBebidas}.
 Nela, verifica-se, como supramencionado, que 52\% das rotas apresentam ao menos 1 repasse, sendo que a quantidade máxima de repasses ocorridos em uma única rota no intervalo estudado foi de 20 repasses.
 Ademais, identifica-se que 93\% das rotas têm até 4 repasses e 99\% das rotas têm até 9 repasses.
 
@@ -48,7 +48,7 @@ Ademais, identifica-se que 93\% das rotas têm até 4 repasses e 99\% das rotas 
     \caption{Histograma da quantidade de repasses sofrido por cada cada rota.}
     \includegraphics[width=0.5\textwidth]{images/5_emp_bebidas/excel_based/qtde_repasses2.png}
     \caption*{\ Fonte: Produzido pelos autores Fernandes \& Alves}
-    \label{fig:RepassesRotasAmbev}
+    \label{fig:RepassesRotasBebidas}
 \end{figure}
 
 Em sequência, as devoluções representam 2,1\% do volume total de entregas na amostra de dados explorada na presente pesquisa. 
@@ -76,7 +76,7 @@ Finalmente, com intuito de simplificar o entendimento do presente tópico, estab
 Por fim, cita-se que na amostragem do estudo de caso da empresa de bebidas, 91,4\% das entregas feitas tiveram uma alteração em suas ordens sequenciais, valor bastante expressivo e que significa dizer, com efeito, que apenas 8\% das entregas ocorreram de acordo com a ordem ou sequência planejada. Apesar de ser a variável mais frequente apresentada, ela tem um menor impacto direto na perspectiva macroscópica da empresa quando comparada com a devolução, por exemplo, a qual implica no não faturamento de produtos e, portanto, gera maior preocupação para o cotidiano da empresa. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Impactos econômicos, ambientais e legais} \label{sec:impactoAmbev}
+\section{Impactos econômicos, ambientais e legais} \label{sec:impactoBebidas}
 
 Como detalhado na Seção \ref{RelevanciaTema}, a problemática estudada no presente trabalho acarreta em efeitos negativos de caráter econômico, social e ambiental. Assim, no âmbito do estudo de caso da empresa de bebidas brasileira, é possível definir dois parâmetros primordiais a partir da base de dados fornecida para entender e quantificar tais impactos: distância adicional percorrida e tempo extraordinário de entrega.
 
@@ -328,7 +328,7 @@ Observando-se a Figura \ref{fig:Volume} é possível estabelecer que o volume en
 Tais comportamentos observados para volumes mais altos são coerentes com a concepção de que clientes maiores podem ser tratados com maior cautela pela equipe de entregas, o que leva a uma redução das variáveis-problema.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Distância entre PDEs e Centro de Distribuição} \label{sec:distanciaCDAmbev}
+\section{Distância entre PDEs e Centro de Distribuição} \label{sec:distanciaCDBebidas}
 
 Em sequência às análises relativas à caracterização da operação da empresa de bebidas, buscou-se identifica-se possíveis efeitos da posição dos PDE nas variáveis problema. Assim, realizou-se a correlação entre os percentuais de repasse, devolução e NAS de cada PDE com sua distância até o CD. 
 Foram calculadas as distâncias linear e veicular de todos os PDEs ao CD, considerando toda a base de dados disponível.
@@ -362,7 +362,7 @@ Não obstante, também verifica-se que as três variáveis-problema não possuem
 \end{spacing}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Dispersão geográfica das rotas} \label{sec:dispersaoAmbev}
+\section{Dispersão geográfica das rotas} \label{sec:dispersaoBebidas}
 
 Ainda considerando a posição geográfica dos PDE, busca-se compreender de forma mais ampla como que o conjunto de clientes englobados numa mesma rota podem variar suas taxas de repasse, devolução e NAS a partir de suas dispersões geográficas.
 
@@ -398,7 +398,7 @@ Tal resultado é coerente com a ideia de que a equipe de entrega pode ser mais c
 \end{spacing}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Geoestatísticas} \label{sec:geoestatAmbev}
+\section{Geoestatísticas} \label{sec:geoestatBebidas}
 
 Posteriormente às análises de posicionamento relativo dos PDE, buscou-se, na presente seção, estabelecer um conjunto de análises geoestatísticas a partir da base de dados da empresa de bebidas a fim de se compreender se existe alguma tendência geográfica em ampla escala entre as variáveis-problema estudadas.
 Essa análise contemplou apenas a cidade de Guarulhos, que representa 80\% do total de entregas disponíveis na base de dados da empresa de bebidas.
@@ -578,7 +578,7 @@ Em geral nota-se que o bairro de Cumbica tem uma predominância de vias orientad
 Finalmente, é possível gerar e exportar resultados de estatísticas discretas sobre a malha através dos métodos disponíveis na biblioteca \textit{lmr\_analyzier}, já descritos no capítulo \ref{sec:mat&met}.
 %
 Uma descrição completa das estatísticas obtidas está apresentada no capítulo de apêndice \ref{sec:appResultMalha}, uma vez que consumiriam demasiado tempo de leitura sendo que não são necessariamente cruciais para entendimento do texto. 
-Ademais, uma descrição mais resumida dos resultados será apresentada ainda neste capítulo, na seção \ref{sec:relMetricasAmbev}.
+Ademais, uma descrição mais resumida dos resultados será apresentada ainda neste capítulo, na seção \ref{sec:relMetricasBebidas}.
 
 Nesta subseção foram calculadas medidas relativas à orientação de vias, conectividade de nós e parâmetros gerais da malha viária de Cumbica, Guarulhos, assim permitindo validar o modelo e testar algumas das ferramentas na prática.
 %
@@ -666,12 +666,12 @@ E finalmente são geradas as estatísticas descritivas para cada um dos bairros,
 \end{figure} % Melhor bairro
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Relação entre as medidas estudadas} \label{sec:relMetricasAmbev}
+\section{Relação entre as medidas estudadas} \label{sec:relMetricasBebidas}
 
-Na presente seção, busca-se apresentar os resultados finais de corrrelação das variáveis-problema com os indicadores de malha e de fator de circuito apresentados nas seções anteriores. Assim, na Subseção \ref{FC_repAmbev}, é apresentada a análise de correlação do fator de circuito com o repasse. Já na Subseção \ref{ImpactoMalhaViariaAmbev}, é apresentada a análise dos resultados de correlação obtidos entre os indicadores da estrutura viária com os repasses e as devoluções.
+Na presente seção, busca-se apresentar os resultados finais de corrrelação das variáveis-problema com os indicadores de malha e de fator de circuito apresentados nas seções anteriores. Assim, na Subseção \ref{FC_repBebidas}, é apresentada a análise de correlação do fator de circuito com o repasse. Já na Subseção \ref{ImpactoMalhaViariaBebidas}, é apresentada a análise dos resultados de correlação obtidos entre os indicadores da estrutura viária com os repasses e as devoluções.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Fator de circuito e repasses} \label{FC_repAmbev}
+\subsection{Fator de circuito e repasses} \label{FC_repBebidas}
 
 A partir dos dados de fator de circuito calculados na Seção \ref{sec:AMBEV_FC}, é possível gerar um comparativo entre eles e os repasses. O objetivo da presente subseção é avaliar o efeito que o fator de circuito pode ter sobre a operação da empresa de bebidas brasileira a partir da perspectiva dos repasses.
 
@@ -694,7 +694,7 @@ Apesar da curva de tendência apresentada, identifica-se a presença de um ponto
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Impacto da malha viária} \label{ImpactoMalhaViariaAmbev}
+\subsection{Impacto da malha viária} \label{ImpactoMalhaViariaBebidas}
 
 Em sequência, busca-se avaliar, para além do fator de circuito, como que os indicadores da estrutura viária obtidos na Seção \ref{sec:AMBEV_MalhaViaria} relacionam-se com os repasses e as devoluções do estudo de caso a partir do conceito de correlação linear simples, apresentado na Seção \ref{RegressoesLineares}.
 
